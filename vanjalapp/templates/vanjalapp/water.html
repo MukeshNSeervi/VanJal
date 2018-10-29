@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vanjal Water</title>
+	{% load static%}
+	<link rel="stylesheet" type="text/css" href="{% static 'vanjalapp/layout/styles/addAboutPage.css' %}">
+</head>
+<body style="background: #a9e4f7;
+background: -moz-linear-gradient(left, hsl(195,83%,82%) 0%, hsl(194,88%,48%) 100%);
+background: -webkit-linear-gradient(left, hsl(195,83%,82%) 0%,hsl(194,88%,48%) 100%);
+background: linear-gradient(to right, hsl(195,83%,82%) 0%,hsl(194,88%,48%) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=1 );">
+<div class="Water">
+	<center>
+	<form method="POST">
+	{% csrf_token %}
+	<button>Add Something About Water</button><br><br>
+	<input type="text" name="about" minlength="20" maxlength="500" required="required" width="1200px"><br><br>
+	<input type="submit" name="submit" value="Edit"><hr>
+	</form>
+	</center>
+</div>
+{{ d | safe}}
+</body>
+</html>

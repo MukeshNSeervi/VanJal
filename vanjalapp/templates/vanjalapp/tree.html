@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tree wala page</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'vanjalapp/layout/styles/addAboutPage.css' %}">
+</head>
+<body style="background: #b4ddb4;
+background: -moz-linear-gradient(left, hsl(120,38%,79%) 0%, hsl(120,38%,65%) 17%, hsl(120,38%,51%) 33%, hsl(120,100%,27%) 67%, hsl(120,100%,17%) 83%, hsl(120,100%,7%) 100%);
+background: -webkit-linear-gradient(left, hsl(120,38%,79%) 0%,hsl(120,38%,65%) 17%,hsl(120,38%,51%) 33%,hsl(120,100%,27%) 67%,hsl(120,100%,17%) 83%,hsl(120,100%,7%) 100%);
+background: linear-gradient(to right, hsl(120,38%,79%) 0%,hsl(120,38%,65%) 17%,hsl(120,38%,51%) 33%,hsl(120,100%,27%) 67%,hsl(120,100%,17%) 83%,hsl(120,100%,7%) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#002400',GradientType=1 );">
+
+<div class="Water">
+	<center>
+	<form method="POST">
+	{% csrf_token %}
+	<button>Add Something About Water</button><br><br>
+	<input type="text" name="about" minlength="20" maxlength="500" required="required"><br><br>
+	<input type="submit" name="submit" value="Edit"><hr>
+	</form>
+	</center>
+</div>
+
+	{{ d|safe}}
+</body>
+</html>

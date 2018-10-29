@@ -1,0 +1,23 @@
+<html>
+<head>
+    {% load static %}
+    <title> VanJal - Login Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'vanjalapp/layout/styles/login.css' %} ">   
+</head>
+    <body >
+        <img style="" src="{% static 'vanjalapp/images/demo/image.jpg' %}">
+    <div class="login-box">
+    <img src="{% static 'vanjalapp/images/demo/avatar.png' %}" class="avatar">
+        <h1>Login Here</h1>
+            <form method="POST" action="">
+                {% csrf_token %}
+            <p>Email ID</p>
+            <input type="email" name="email" placeholder="Enter your mail id" required="required">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password" required="required">
+            <input type="submit" name="submit" value="Login">
+           <!--  <a href="#">Forget Password</a>     -->
+            </form>
+         </div>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'vanjalapp/layout/styles/addAboutPage.css' %}">
+</head>
+<body>
+	<div id="add">
+		<div class = "del">
+		<button class="btn"> Please Enter about your City</button>
+		<form method="POST">
+			{% csrf_token %}
+			<input type="text" name="about" minlength="20" maxlength="500" required="required"><br>
+			<input type="submit" name="submit" value="Add">
+    	</form>
+    </div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>about page!</title>
+</head>
+<body>
+
+{{ file | safe }}
+
+	<!-- {% for line in file %}
+	{{ line | safe  }}
+	{% endfor %} -->
+	<footer style="position: absolute;top: 95%;left: 93%">
+		<a href="{% url 'oxyVanJal:loginIndex' %}"><button>Go Back!</button></a>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Government Login Page!!!</title>
+	<style type="text/css">
+		body{
+			margin:0;
+			padding:0;
+			background-color: background: #1e5799;
+background: -moz-linear-gradient(left, hsl(212,67%,36%) 0%, hsl(207,69%,51%) 45%, hsl(208,73%,46%) 53%, hsl(206,70%,70%) 100%);
+background: -webkit-linear-gradient(left, hsl(212,67%,36%) 0%,hsl(207,69%,51%) 45%,hsl(208,73%,46%) 53%,hsl(206,70%,70%) 100%);
+background: linear-gradient(to right, hsl(212,67%,36%) 0%,hsl(207,69%,51%) 45%,hsl(208,73%,46%) 53%,hsl(206,70%,70%) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );
+		}
+		.block-content{
+			display: none;
+
+		}
+		.block2-content{
+			display: none;
+		}
+
+		
+
+		input{
+			/*margin: 10px;
+			padding:10px;
+			width: 200px;
+			border-radius: 25px;
+			background:transparent;
+			outline:none;
+			border:none;
+			border-bottom: 1px solid black;
+			color:#fff;*/
+			
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 100px;
+    /*transform: translate(-50%,-50%);*/
+		}
+		input[type="submit"]:hover{
+			background-color:#ff6666;
+			border-bottom-left-radius: 10px solid violet; 
+
+		}
+		.State{
+			position: absolute;
+			top: 25%;
+		
+		}
+		.central{
+			position: absolute;
+			left:50%;
+			top:25%;
+			
+		}
+		/*.central input[type="text"]{
+			position: absolute;
+			margin: 25px;
+			margin-left: 0px;
+		}
+		.central input[type="password"]{
+			position: absolute;
+			margin: 50px;
+			margin-left: 0px;
+		}
+		.central input[type="submit"]{
+			position: absolute;
+			margin: 75px;
+			margin-left: 0px;
+		}*/
+		.State:hover .block-content{
+			display:block;
+		}
+		.central:hover .block2-content{
+			display:block;
+		}
+	</style>
+<body>
+	<ul>
+		<div class="State">
+			<h1>Touch Here! for Government Login!!</h1>
+			<div class="block-content">
+			<form method="POST">
+				{% csrf_token %}
+				<h1>State Government Login!!</h1>
+				<input type="text" name="name" placeholder="Enter Your State name" required><br>
+				<input type="password" name="password" placeholder="Enter your password" required><br>
+				<input type="submit" name="submit" value="Login!!">
+			</form>
+			</div>
+		</div>
+		<div class="central">
+			<h1>Touch Here! for NGO Login!!</h1>
+			<div class="block2-content">
+			<form method="POST">
+				{% csrf_token %}
+				<h1>NGO's  Login!!</h1>
+				<input type="text" name="name" placeholder="Enter Location Of your NGO" required><br>
+				<input type="password" name="password" placeholder="Enter Your Password" required><br>
+				<input type="submit" name="submit" value="Login!!">
+				
+			</form>
+			</div>
+		</div>
+	</ul>
+</body>
+</html>

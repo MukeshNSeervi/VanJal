@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>complaints page!!!</title>
+	<style type="text/css">
+		body{
+			padding: 0px;
+			margin: opx;
+			color: #ffffff;
+		}
+		h3{
+			background-color :red;
+			color: white
+			padding:100px;
+		}
+	</style>
+</head>
+<body style="background-color: black;">
+
+	
+	{{file | safe }}
+
+	<header style="position: absolute;left:90%;top:5%;">	
+		 <a href="{% url 'oxyVanJal:index' %}"><button>Log Out!</button></a> 
+	</header>
+</body>
+</html>
